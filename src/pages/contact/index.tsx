@@ -1,3 +1,3 @@
 export function ContactPage() {
-  return <main />
+	return <main />;
 }

@@ -1,3 +1,3 @@
 export function StackPage() {
-  return <main />
+	return <main />;
 }

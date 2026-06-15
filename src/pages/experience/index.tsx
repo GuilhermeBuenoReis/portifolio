@@ -1,3 +1,3 @@
 export function ExperiencePage() {
-  return <main />
+	return <main />;
 }
