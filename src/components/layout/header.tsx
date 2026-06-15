@@ -48,7 +48,7 @@ export function Header() {
 					to="/"
 					className="shrink-0 text-[1.0625rem] font-bold tracking-tight text-fg"
 				>
-					DevPortfolio
+					Guilherme Reis
 				</Link>
 
 				<nav className="hidden flex-1 items-center justify-center gap-1 md:flex">
