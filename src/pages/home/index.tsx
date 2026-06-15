@@ -1,6 +1,7 @@
 import { ExperienceSection } from "#/features/experience/components/experience-section";
 import { HeroSection } from "#/features/portfolio/components/hero-section";
 import { FeaturedProjectsSection } from "#/features/projects/components/featured-projects-section";
+import { StackSection } from "#/features/stack/components/stack-section";
 
 export function HomePage() {
 	return (
@@ -8,6 +9,7 @@ export function HomePage() {
 			<HeroSection />
 			<FeaturedProjectsSection />
 			<ExperienceSection />
+			<StackSection />
 		</>
 	);
 }
