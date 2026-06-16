@@ -62,33 +62,25 @@ export function ProjectCard({ project, index }: Props) {
 					))}
 				</div>
 
-				<div className="mt-auto flex gap-2 pt-3">
-					<a
-						href={project.github}
-						target="_blank"
-						rel="noopener noreferrer"
-						className={cn(
-							"inline-flex flex-1 items-center gap-2 rounded-md",
-							"border border-border-strong bg-transparent",
-							"px-4 py-2 text-sm font-medium text-fg",
-							"transition-colors duration-150",
-							"hover:border-(--primary-border) hover:text-primary-hover",
-						)}
-					>
-						<Github size={14} />
-						GitHub
-					</a>
-					<button
-						type="button"
-						className={cn(
-							"flex-1 items-center rounded-md",
-							"bg-primary px-4 py-2",
-							"text-sm font-medium text-white",
-							"transition-colors duration-150 hover:bg-primary-hover",
-						)}
-					>
-						Detalhes
-					</button>
+				<div className="mt-auto flex flex-wrap gap-2 pt-3">
+					{project.repos.map((repo) => (
+						<a
+							key={repo.url}
+							href={repo.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							className={cn(
+								"inline-flex flex-1 items-center justify-center gap-2 rounded-md",
+								"border border-border-strong bg-transparent",
+								"px-4 py-2 text-sm font-medium text-fg",
+								"transition-colors duration-150",
+								"hover:border-(--primary-border) hover:text-primary-hover",
+							)}
+						>
+							<Github size={14} />
+							{repo.label}
+						</a>
+					))}
 				</div>
 			</div>
 		</motion.div>

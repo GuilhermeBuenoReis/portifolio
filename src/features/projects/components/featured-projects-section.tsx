@@ -2,6 +2,8 @@ import { motion } from "motion/react";
 import { projects } from "#/features/projects/data/projects";
 import { ProjectCard } from "./project-card";
 
+const featuredProjects = projects.filter((project) => project.featured);
+
 export function FeaturedProjectsSection() {
 	return (
 		<motion.section
@@ -23,7 +25,7 @@ export function FeaturedProjectsSection() {
 				</div>
 
 				<div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-					{projects.map((project, index) => (
+					{featuredProjects.map((project, index) => (
 						<ProjectCard key={project.id} project={project} index={index} />
 					))}
 				</div>
