@@ -1,4 +1,5 @@
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { MainLayout } from "#/components/layout/main-layout";
 
 import appCss from "../styles/globals.css?url";
 
@@ -23,6 +24,7 @@ export const Route = createRootRoute({
 			},
 		],
 	}),
+	component: MainLayout,
 	shellComponent: RootDocument,
 });
 
