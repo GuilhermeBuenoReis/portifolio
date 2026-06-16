@@ -15,7 +15,11 @@ const socialLinks = [
 export function Footer() {
 	return (
 		<footer
-			className={cn("border-t border-border", "bg-background-soft", "py-8")}
+			className={cn(
+				"border-t border-border",
+				"bg-background-soft",
+				"pt-8 pb-28 lg:pb-8",
+			)}
 		>
 			<div
 				className={cn(
