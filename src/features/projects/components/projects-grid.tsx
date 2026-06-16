@@ -6,10 +6,9 @@ import { ProjectCard } from "./project-card";
 
 const categories = [
 	"Todos",
-	"Fullstack",
-	"E-commerce",
-	"Health Tech",
-	"Mobile App",
+	"Trabalho",
+	"Projeto Pessoal",
+	"Faculdade",
 ] as const;
 
 type Category = (typeof categories)[number];
