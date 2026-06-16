@@ -1,3 +1,13 @@
+import { DeveloperCodeBlock } from "#/features/stack/components/developer-code-block";
+import { StackPageHero } from "#/features/stack/components/stack-page-hero";
+import { TechnicalOverviewSection } from "#/features/stack/components/technical-overview-section";
+
 export function StackPage() {
-	return <main />;
+	return (
+		<>
+			<StackPageHero />
+			<TechnicalOverviewSection />
+			<DeveloperCodeBlock />
+		</>
+	);
 }
