@@ -43,7 +43,7 @@ export function Header() {
 				"bg-[rgba(5,5,9,0.82)] backdrop-blur-md",
 			)}
 		>
-			<div className="mx-auto flex h-full max-w-280 items-center gap-12 px-6">
+			<div className="mx-auto flex h-full max-w-280 items-center justify-between gap-6 px-4 sm:px-6 lg:gap-12">
 				<Link
 					to="/"
 					className="shrink-0 text-[1.0625rem] font-bold tracking-tight text-fg"
@@ -51,7 +51,7 @@ export function Header() {
 					Guilherme Reis
 				</Link>
 
-				<nav className="hidden flex-1 items-center justify-center gap-1 md:flex">
+				<nav className="hidden flex-1 items-center justify-center gap-1 lg:flex">
 					{navLinks.map((link) => (
 						<NavLink key={link.to} {...link} />
 					))}
@@ -64,10 +64,12 @@ export function Header() {
 						"border border-(--primary-border) bg-(--primary-soft)",
 						"px-4 py-2 text-sm font-medium text-primary-hover",
 						"transition-colors duration-150",
+						"outline-none focus-visible:ring-2 focus-visible:ring-(--primary-border)",
 						"hover:border-primary hover:bg-[rgba(139,92,246,0.22)]",
 					)}
 				>
-					Entrar em contato
+					<span className="lg:hidden">Contact</span>
+					<span className="hidden lg:inline">Entrar em contato</span>
 				</Link>
 			</div>
 		</header>
