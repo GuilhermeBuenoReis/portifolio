@@ -1,339 +1,196 @@
-Welcome to your new TanStack Start app! 
+# Guilherme Bueno Reis - Portfolio
 
-# Getting Started
+Portfólio pessoal de Guilherme Bueno Reis, Desenvolvedor Fullstack, criado para apresentar projetos, trajetória profissional, stack técnica, certificações e canais de contato.
 
-To run this application:
+O projeto tem foco em React, TypeScript, Node.js, interfaces modernas e aplicações web performáticas.
+
+## About
+
+Este portfólio reúne uma visão prática da minha atuação como desenvolvedor fullstack. A aplicação apresenta projetos reais e acadêmicos, experiência profissional, formação, stack de desenvolvimento e uma área de contato para novas oportunidades.
+
+A interface foi construída com uma estética escura por padrão, suporte a tema claro/sistema, navegação responsiva e páginas organizadas por domínio.
+
+## Preview
+
+URL configurada nos metadados do projeto:
+
+[https://guilherme-reis.vercel.app](https://guilherme-reis.vercel.app)
+
+Assets públicos disponíveis no projeto:
+
+- `public/favicon.svg`
+- `public/favicon.ico`
+- `public/robots.txt`
+- `public/curriculo-guilherme-reis.pdf`
+
+## Features
+
+- Página inicial com hero, chamadas para projetos e contato.
+- Listagem de projetos com filtro por categoria: trabalho, projeto pessoal e faculdade.
+- Seção de projetos em destaque.
+- Página de experiência com trajetória profissional, formação acadêmica e certificações.
+- Página de stack com visão técnica de frontend, backend, infraestrutura, arquitetura e ferramentas.
+- Página sobre com história, visão de produto, foco técnico e filosofia de desenvolvimento.
+- Página de contato com e-mail, Gmail, WhatsApp, GitHub e LinkedIn.
+- Layout responsivo com header desktop e navegação inferior para mobile.
+- Alternância de tema entre claro, escuro e sistema.
+- Animações de entrada com Motion.
+- Metadados de SEO, Open Graph, Twitter Card, canonical URL e `robots.txt`.
+
+## Technologies
+
+Principais tecnologias e ferramentas presentes no projeto:
+
+- React 19
+- React DOM 19
+- TypeScript 6
+- Vite 8
+- TanStack Start
+- TanStack Router
+- TanStack Router Devtools
+- Tailwind CSS v4
+- Motion
+- Lucide React
+- Nitro
+- Biome
+- Vitest
+- Testing Library
+- jsdom
+- clsx
+- tailwind-merge
+- class-variance-authority
+
+O projeto também possui configuração compatível com componentes no estilo shadcn/ui por meio do arquivo `components.json`.
+
+## Certifications
+
+- HTTP e Performance
+- Aprofundando em Hooks
+- Interfaces, Navegação e Armazenamento local
+- Node.js
+- Fundamentos de Java
+
+## Getting Started
+
+Este projeto usa `pnpm`, conforme indicado pelo arquivo `pnpm-lock.yaml`.
+
+Instale as dependências:
 
 ```bash
 pnpm install
+```
+
+Rode o servidor de desenvolvimento:
+
+```bash
 pnpm dev
 ```
 
-# Building For Production
+Por padrão, o script de desenvolvimento usa a porta `3000`:
 
-To build this application for production:
+```bash
+http://localhost:3000
+```
+
+Para gerar a build de produção:
 
 ```bash
 pnpm build
 ```
 
-## Testing
-
-This project uses [Vitest](https://vitest.dev/) for testing. You can run the tests with:
+Para visualizar a build:
 
 ```bash
-pnpm test
+pnpm preview
 ```
 
-## Styling
+## Scripts
 
-This project uses [Tailwind CSS](https://tailwindcss.com/) for styling.
+Scripts disponíveis no `package.json`:
 
-### Removing Tailwind CSS
+| Script | Comando | Descrição |
+| --- | --- | --- |
+| `dev` | `vite dev --port 3000` | Inicia o servidor de desenvolvimento. |
+| `generate-routes` | `tsr generate` | Gera a árvore de rotas do TanStack Router. |
+| `build` | `vite build` | Cria a build de produção. |
+| `preview` | `vite preview` | Executa o preview da build. |
+| `test` | `vitest run` | Executa os testes com Vitest. |
+| `format` | `biome format` | Formata os arquivos com Biome. |
+| `lint` | `biome lint` | Executa o lint com Biome. |
+| `check` | `biome check` | Executa verificações do Biome. |
 
-If you prefer not to use Tailwind CSS:
+## Project Structure
 
-1. Remove the demo pages in `src/routes/demo/`
-2. Replace the Tailwind import in `src/styles.css` with your own styles
-3. Remove `tailwindcss()` from the plugins array in `vite.config.ts`
-4. Uninstall the packages: `pnpm add @tailwindcss/vite tailwindcss --dev`
+Resumo da estrutura principal do projeto:
 
-## Linting & Formatting
-
-This project uses [Biome](https://biomejs.dev/) for linting and formatting. The following scripts are available:
-
-
-```bash
-pnpm lint
-pnpm format
-pnpm check
+```txt
+src/
+  app/
+    providers/          # Providers globais da aplicação
+  components/
+    layout/             # Header, footer, layout principal e navegação mobile
+    ui/                 # Componentes visuais reutilizáveis
+  features/
+    about/              # Seções e dados da página Sobre
+    contact/            # Componentes e dados de contato
+    experience/         # Experiência, trajetória, formação e certificações
+    portfolio/          # Hero principal do portfólio
+    projects/           # Cards, grid, filtros e dados dos projetos
+    stack/              # Seções e dados da stack técnica
+  lib/
+    utils/              # Utilitários compartilhados
+  pages/                # Composição das páginas
+  routes/               # Rotas file-based do TanStack Router
+  styles/
+    globals.css         # Tema visual, tokens e estilos globais
 ```
 
-
-## Deploy with Nitro
-
-This project uses Nitro as a generic server adapter, so it can run on any Node-compatible host.
-
-```bash
-npm run build
-node dist/server/index.mjs
-```
-
-The build output is a self-contained Node server. To deploy, push the `dist/` directory to your host (Render, Fly.io, your own VPS, etc.) and run the server command above.
-
-For host-specific presets (Vercel, Netlify, Cloudflare, AWS Lambda, etc.) and tuning, see https://v3.nitro.build/deploy.
-
-
-## Shadcn
-
-Add components using the latest version of [Shadcn](https://ui.shadcn.com/).
-
-```bash
-pnpm dlx shadcn@latest add button
-```
-
-
-# Events Example - Haute Pâtisserie 2026
-
-A beautiful pastry conference website built with TanStack Start and Netlify, featuring:
-
-- **Speakers & Sessions**: Managed with content-collections for easy markdown-based content
-- **Conference Schedule**: Day-by-day timeline of all sessions
-- **AI Assistant (Remy)**: An AI-powered chat assistant to help attendees navigate the conference
-- **Elegant Dark Theme**: Custom typography with Playfair Display and copper/gold accents
-
-## Features
-
-### Content Management
-- Speaker profiles with bios, awards, and specialty information
-- Session details with topics, duration, and speaker attribution
-- All content in markdown files using content-collections
-
-### AI-Powered Assistance
-- Chat with "Remy" the culinary assistant
-- Search for speakers and sessions by topic
-- Get recommendations based on interests
-- Supports multiple AI providers (Anthropic, OpenAI, Gemini, Ollama)
-
-### Routes
-- `/` - Home page with featured speakers and sessions
-- `/schedule` - Conference schedule with day-by-day timeline
-- `/speakers` - All speakers grid
-- `/speakers/:slug` - Individual speaker detail page
-- `/talks` - All sessions grid
-- `/talks/:slug` - Individual session detail page
-
-## Getting Started
-
-```bash
-# Create a new project with this example
-npx netlify-cta my-conference --example events
-
-# Navigate to the project
-cd my-conference
-
-# Install dependencies
-pnpm install
-
-# Start the development server
-pnpm dev
-```
-
-## AI Configuration
-
-To use the AI assistant, set one of the following environment variables:
-
-```bash
-# Anthropic (Claude)
-ANTHROPIC_API_KEY=your-key-here
-
-# OpenAI
-OPENAI_API_KEY=your-key-here
-
-# Google Gemini
-GEMINI_API_KEY=your-key-here
-
-# Ollama (local, no API key needed)
-# Just ensure Ollama is running locally
-```
-
-The assistant will automatically use the first available provider.
-
-## Customization
-
-### Adding Speakers
-Create a new markdown file in `content/speakers/`:
-
-```markdown
----
-name: "Chef Name"
-title: "Executive Pastry Chef"
-specialty: "French Pastry"
-restaurant: "Restaurant Name"
-location: "City, Country"
-headshot: "speakers/chef-name.jpg"
-awards:
-  - "Award 1"
-  - "Award 2"
----
-
-Bio content here...
-```
-
-### Adding Sessions
-Create a new markdown file in `content/talks/`:
-
-```markdown
----
-title: "Session Title"
-speaker: "Chef Name"
-duration: "90 minutes"
-image: "talks/session-image.jpg"
-topics:
-  - "Topic 1"
-  - "Topic 2"
----
-
-Session description here...
-```
-
-## Theme
-
-The example uses a custom dark theme with:
-- **Font**: Playfair Display (display) and Cormorant Garamond (body)
-- **Colors**: Copper and gold accents on a dark charcoal background
-- **Effects**: Elegant card hover animations, grain texture overlay
-
-
-
-## Routing
-
-This project uses [TanStack Router](https://tanstack.com/router) with file-based routing. Routes are managed as files in `src/routes`.
-
-### Adding A Route
-
-To add a new route to your application just add a new file in the `./src/routes` directory.
-
-TanStack will automatically generate the content of the route file for you.
-
-Now that you have two routes you can use a `Link` component to navigate between them.
-
-### Adding Links
-
-To use SPA (Single Page Application) navigation you will need to import the `Link` component from `@tanstack/react-router`.
-
-```tsx
-import { Link } from "@tanstack/react-router";
-```
-
-Then anywhere in your JSX you can use it like so:
-
-```tsx
-<Link to="/about">About</Link>
-```
-
-This will create a link that will navigate to the `/about` route.
-
-More information on the `Link` component can be found in the [Link documentation](https://tanstack.com/router/v1/docs/framework/react/api/router/linkComponent).
-
-### Using A Layout
-
-In the File Based Routing setup the layout is located in `src/routes/__root.tsx`. Anything you add to the root route will appear in all the routes. The route content will appear in the JSX where you render `{children}` in the `shellComponent`.
-
-Here is an example layout that includes a header:
-
-```tsx
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
-
-export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'My App' },
-    ],
-  }),
-  shellComponent: ({ children }) => (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        <header>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-          </nav>
-        </header>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  ),
-})
-```
-
-More information on layouts can be found in the [Layouts documentation](https://tanstack.com/router/latest/docs/framework/react/guide/routing-concepts#layouts).
-
-## Server Functions
-
-TanStack Start provides server functions that allow you to write server-side code that seamlessly integrates with your client components.
-
-```tsx
-import { createServerFn } from '@tanstack/react-start'
-
-const getServerTime = createServerFn({
-  method: 'GET',
-}).handler(async () => {
-  return new Date().toISOString()
-})
-
-// Use in a component
-function MyComponent() {
-  const [time, setTime] = useState('')
-  
-  useEffect(() => {
-    getServerTime().then(setTime)
-  }, [])
-  
-  return <div>Server time: {time}</div>
-}
-```
-
-## API Routes
-
-You can create API routes by using the `server` property in your route definitions:
-
-```tsx
-import { createFileRoute } from '@tanstack/react-router'
-import { json } from '@tanstack/react-start'
-
-export const Route = createFileRoute('/api/hello')({
-  server: {
-    handlers: {
-      GET: () => json({ message: 'Hello, World!' }),
-    },
-  },
-})
-```
-
-## Data Fetching
-
-There are multiple ways to fetch data in your application. You can use TanStack Query to fetch data from a server. But you can also use the `loader` functionality built into TanStack Router to load the data for a route before it's rendered.
-
-For example:
-
-```tsx
-import { createFileRoute } from '@tanstack/react-router'
-
-export const Route = createFileRoute('/people')({
-  loader: async () => {
-    const response = await fetch('https://swapi.dev/api/people')
-    return response.json()
-  },
-  component: PeopleComponent,
-})
-
-function PeopleComponent() {
-  const data = Route.useLoaderData()
-  return (
-    <ul>
-      {data.results.map((person) => (
-        <li key={person.name}>{person.name}</li>
-      ))}
-    </ul>
-  )
-}
-```
-
-Loaders simplify your data fetching logic dramatically. Check out more information in the [Loader documentation](https://tanstack.com/router/latest/docs/framework/react/guide/data-loading#loader-parameters).
-
-# Demo files
-
-Files prefixed with `demo` can be safely deleted. They are there to provide a starting point for you to play around with the features you've installed.
-
-# Learn More
-
-You can learn more about all of the offerings from TanStack in the [TanStack documentation](https://tanstack.com).
-
-For TanStack Start specific documentation, visit [TanStack Start](https://tanstack.com/start).
+Arquivos de configuração relevantes:
+
+- `vite.config.ts`
+- `tsconfig.json`
+- `biome.json`
+- `tsr.config.json`
+- `components.json`
+
+## Routes
+
+Rotas principais encontradas em `src/routes`:
+
+- `/` - página inicial
+- `/projects` - projetos
+- `/experience` - experiência e formação
+- `/stack` - stack técnica
+- `/about` - sobre
+- `/contact` - contato
+
+## Performance and SEO
+
+O projeto inclui alguns cuidados coerentes com performance, SEO e experiência de uso:
+
+- Rotas com `defaultPreload: "intent"` no TanStack Router.
+- Restauração de scroll habilitada no roteador.
+- Carregamento assíncrono de seções da home com `React.lazy` e `Suspense`.
+- Metadados globais com title, description, robots, author e theme color.
+- Tags Open Graph e Twitter Card configuradas.
+- Canonical URL definida.
+- Preconnect para Google Fonts.
+- `robots.txt` público.
+- Layout responsivo para desktop e mobile.
+- Respeito a `prefers-reduced-motion` nos estilos globais.
+
+## Contact
+
+Canais de contato encontrados no código:
+
+- E-mail: [guilhermebuenoreis.contact@gmail.com](mailto:guilhermebuenoreis.contact@gmail.com?subject=Contato%20pelo%20portf%C3%B3lio)
+- GitHub: [GuilhermeBuenoReis](https://github.com/GuilhermeBuenoReis)
+- LinkedIn: [guilherme-bueno-reis](https://www.linkedin.com/in/guilherme-bueno-reis)
+- Instagram: [devguilherme_bueno](https://www.instagram.com/devguilherme_bueno/)
+- WhatsApp: [abrir conversa](https://wa.me/5542988663891?text=Ol%C3%A1%20Guilherme%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.)
+
+## Notes
+
+- Este repositório está marcado como `private` no `package.json`.
+- Nenhuma licença foi declarada no projeto.
+- Não há screenshot versionado no repositório.

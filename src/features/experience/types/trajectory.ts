@@ -20,5 +20,5 @@ export type Education = {
 export type Certification = {
 	id: string;
 	name: string;
-	issuer: string;
+	issuer?: string;
 };
