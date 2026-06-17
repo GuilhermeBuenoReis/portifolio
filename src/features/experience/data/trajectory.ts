@@ -51,23 +51,23 @@ export const education: Education = {
 
 export const certifications: Certification[] = [
 	{
-		id: "aws",
-		name: "AWS Cloud Practitioner",
-		issuer: "Amazon Web Services • 2024",
+		id: "http-performance",
+		name: "HTTP e Performance",
 	},
 	{
-		id: "react",
-		name: "React Advanced Specialization",
-		issuer: "Meta Career • 2023",
+		id: "aprofundando-hooks",
+		name: "Aprofundando em Hooks",
 	},
 	{
-		id: "typescript",
-		name: "TypeScript Expert Certification",
-		issuer: "FullStack Academy • 2023",
+		id: "interfaces-navegacao-armazenamento-local",
+		name: "Interfaces, Navegação e Armazenamento local",
 	},
 	{
-		id: "agile",
-		name: "Agile Software Development",
-		issuer: "Google Project Mgmt • 2022",
+		id: "nodejs",
+		name: "Node.js",
+	},
+	{
+		id: "fundamentos-java",
+		name: "Fundamentos de Java",
 	},
 ];

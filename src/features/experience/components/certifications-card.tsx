@@ -35,9 +35,11 @@ export function CertificationsCard() {
 						<span className="text-sm font-semibold text-fg">
 							{certification.name}
 						</span>
-						<span className="font-mono text-xs text-fg-muted">
-							{certification.issuer}
-						</span>
+						{certification.issuer && (
+							<span className="font-mono text-xs text-fg-muted">
+								{certification.issuer}
+							</span>
+						)}
 					</li>
 				))}
 			</ul>
