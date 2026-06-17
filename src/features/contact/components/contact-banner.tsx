@@ -39,7 +39,8 @@ export function ContactBanner() {
 
 							<pre className="m-0">
 								<code>
-									{`const craft = {
+									{`
+								const craft = {
 									name: 'Guilherme Reis',
 									role: 'Fullstack Developer',
 									stack: ['React', 'Node.js', 'TypeScript'],

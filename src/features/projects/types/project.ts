@@ -1,4 +1,4 @@
-import type { ProjectPreview } from "#/components/ui/project-preview-mockups";
+import type { ProjectPreview } from "#/features/projects/components/project-preview-mockups";
 
 export type ProjectCategory = "Trabalho" | "Projeto Pessoal" | "Faculdade";
 

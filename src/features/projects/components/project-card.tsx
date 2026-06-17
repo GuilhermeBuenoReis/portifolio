@@ -1,8 +1,8 @@
 import { motion } from "motion/react";
-import { ProjectPreviewMockup } from "#/components/ui/project-preview-mockups";
 import { SkillIcons } from "#/components/ui/skill-icons";
 import type { Project } from "#/features/projects/types/project";
 import { cn } from "#/lib/utils";
+import { ProjectPreviewMockup } from "./project-preview-mockups";
 
 type Props = {
 	project: Project;

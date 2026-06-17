@@ -1,39 +1,7 @@
-import { Link, useRouterState } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import monogramaGR from "#/assets/images/monograma-GR.png";
 import { cn } from "#/lib/utils";
-
-const navLinks = [
-	{ label: "Início", to: "/", exact: true },
-	{ label: "Projetos", to: "/projects", exact: false },
-	{ label: "Experiência", to: "/experience", exact: false },
-	{ label: "Stack", to: "/stack", exact: false },
-	{ label: "Sobre", to: "/about", exact: false },
-] as const;
-
-type NavLinkDef = (typeof navLinks)[number];
-
-function NavLink({ label, to, exact }: NavLinkDef) {
-	const { location } = useRouterState();
-	const isActive = exact
-		? location.pathname === to
-		: location.pathname === to || location.pathname.startsWith(`${to}/`);
-
-	return (
-		<Link
-			to={to}
-			className={cn(
-				"relative inline-flex items-center whitespace-nowrap",
-				"rounded px-3 py-1.5 text-sm transition-colors duration-150",
-				isActive ? "text-primary-hover" : "text-fg-secondary hover:text-fg",
-			)}
-		>
-			{label}
-			{isActive && (
-				<span className="absolute -bottom-px left-3 right-3 h-px bg-(--primary-border)" />
-			)}
-		</Link>
-	);
-}
+import { NavLink, navLinks } from "./nav-link";
 
 export function Header() {
 	return (
@@ -73,7 +41,7 @@ export function Header() {
 							Guilherme Reis
 						</span>
 						<span className="mt-1 text-xs font-medium text-fg-muted">
-							Full Stack Developer
+							Desenvolvedor Full Stack
 						</span>
 					</span>
 				</Link>
