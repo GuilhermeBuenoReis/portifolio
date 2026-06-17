@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import monogramaGR from "#/assets/images/monograma-GR.png";
+import { ModeToggle } from "#/components/mode-toggle";
 import { cn } from "#/lib/utils";
 import { NavLink, navLinks } from "./nav-link";
 
@@ -9,7 +10,7 @@ export function Header() {
 			className={cn(
 				"fixed left-0 right-0 top-0 z-50 h-16",
 				"border-b border-border",
-				"bg-[rgba(5,5,9,0.82)] backdrop-blur-md",
+				"bg-(--header-background) backdrop-blur-md",
 			)}
 		>
 			<div className="mx-auto flex h-full max-w-280 items-center justify-between gap-6 px-4 sm:px-6 lg:gap-12">
@@ -52,20 +53,23 @@ export function Header() {
 					))}
 				</nav>
 
-				<Link
-					to="/contact"
-					className={cn(
-						"inline-flex shrink-0 items-center rounded-md",
-						"border border-(--primary-border) bg-(--primary-soft)",
-						"px-4 py-2 text-sm font-medium text-primary-hover",
-						"transition-colors duration-150",
-						"outline-none focus-visible:ring-2 focus-visible:ring-(--primary-border)",
-						"hover:border-primary hover:bg-[rgba(139,92,246,0.22)]",
-					)}
-				>
-					<span className="lg:hidden">Contact</span>
-					<span className="hidden lg:inline">Entrar em contato</span>
-				</Link>
+				<div className="flex shrink-0 items-center gap-2 sm:gap-3">
+					<ModeToggle />
+					<Link
+						to="/contact"
+						className={cn(
+							"inline-flex shrink-0 items-center rounded-md",
+							"border border-(--primary-border) bg-(--primary-soft)",
+							"px-4 py-2 text-sm font-medium text-primary-hover",
+							"transition-colors duration-150",
+							"outline-none focus-visible:ring-2 focus-visible:ring-(--primary-border)",
+							"hover:border-primary hover:bg-[rgba(139,92,246,0.22)]",
+						)}
+					>
+						<span className="lg:hidden">Contact</span>
+						<span className="hidden lg:inline">Entrar em contato</span>
+					</Link>
+				</div>
 			</div>
 		</header>
 	);

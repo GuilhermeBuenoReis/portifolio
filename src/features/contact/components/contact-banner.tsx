@@ -27,7 +27,7 @@ export function ContactBanner() {
 						<div
 							className={cn(
 								"rounded-xl border border-(--primary-border) bg-black/30 p-5",
-								"font-mono text-xs leading-relaxed text-fg-secondary",
+								"font-mono text-xs leading-relaxed text-zinc-300",
 								"shadow-xl shadow-[rgba(91,33,182,0.18)] backdrop-blur",
 							)}
 						>

@@ -16,7 +16,7 @@ function buildSuccess(input) {
 }`;
 
 const kw = "text-primary-hover";
-const str = "text-[#c4b5fd]";
+const str = "text-emerald-600 dark:text-[#c4b5fd]";
 const prop = "text-fg";
 const punct = "text-fg-muted";
 
@@ -43,14 +43,14 @@ export function DeveloperCodeBlock() {
 					transition={{ duration: 0.5, ease: "easeOut" }}
 					className={cn(
 						"relative overflow-hidden rounded-xl border border-border",
-						"bg-[#08080d] [box-shadow:var(--shadow-card)]",
+						"bg-surface dark:bg-[#08080d] [box-shadow:var(--shadow-card)]",
 					)}
 				>
 					<div className="flex items-center justify-between border-b border-border px-5 py-3">
 						<div className="flex items-center gap-1.5">
-							<span className="h-3 w-3 rounded-full bg-[#3f3f46]" />
-							<span className="h-3 w-3 rounded-full bg-[#3f3f46]" />
-							<span className="h-3 w-3 rounded-full bg-[#3f3f46]" />
+							<span className="h-3 w-3 rounded-full bg-zinc-300 dark:bg-[#3f3f46]" />
+							<span className="h-3 w-3 rounded-full bg-zinc-300 dark:bg-[#3f3f46]" />
+							<span className="h-3 w-3 rounded-full bg-zinc-300 dark:bg-[#3f3f46]" />
 						</div>
 						<button
 							type="button"
@@ -112,7 +112,7 @@ export function DeveloperCodeBlock() {
 							<span className={punct}>{"}"}</span>
 							{"\n\n"}
 							<span className={kw}>function</span>{" "}
-							<span className="text-primary">buildSuccess</span>
+							<span className="text-primary-hover">buildSuccess</span>
 							<span className={punct}>(input) {"{"}</span>
 							{"\n  "}
 							<span className={kw}>return</span>{" "}

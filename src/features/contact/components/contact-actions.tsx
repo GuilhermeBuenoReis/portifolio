@@ -40,6 +40,7 @@ export function ContactActions() {
 					className={cn(
 						"inline-flex items-center justify-center gap-2 rounded-lg",
 						"bg-primary px-6 py-3.5 text-sm font-semibold text-white",
+						"shadow-sm shadow-primary/25",
 						"transition-colors duration-150 hover:bg-primary-hover",
 					)}
 				>
@@ -54,9 +55,10 @@ export function ContactActions() {
 						rel="noreferrer"
 						className={cn(
 							"inline-flex items-center justify-center gap-2 rounded-lg",
-							"border border-border-strong bg-surface-elevated px-6 py-3.5",
-							"text-sm font-medium text-fg",
-							"transition-colors duration-150 hover:border-(--primary-border)",
+							"border border-border-strong bg-surface shadow-sm dark:bg-surface-elevated",
+							"px-6 py-3.5 text-sm font-medium text-fg",
+							"transition-colors duration-150",
+							"hover:border-(--primary-border) hover:bg-(--primary-soft) hover:text-primary-hover",
 						)}
 					>
 						<ExternalLink size={16} />
@@ -71,8 +73,8 @@ export function ContactActions() {
 						className={cn(
 							"inline-flex items-center justify-center gap-2 rounded-lg",
 							"border border-(--primary-border) bg-(--primary-soft) px-6 py-3.5",
-							"text-sm font-medium text-fg",
-							"transition-colors duration-150 hover:border-primary-hover hover:text-primary-hover",
+							"text-sm font-medium text-primary-hover shadow-sm",
+							"transition-colors duration-150 hover:border-primary-hover",
 						)}
 					>
 						<WhatsappIcon size={16} />
