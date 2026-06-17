@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import monogramaGR from "#/assets/images/monograma-GR.png";
 import { ModeToggle } from "#/components/mode-toggle";
+import { Monogram } from "#/components/ui/monogram";
 import { cn } from "#/lib/utils";
 import { NavLink, navLinks } from "./nav-link";
 
@@ -30,12 +30,7 @@ export function Header() {
 							"transition-colors duration-150 group-hover:border-primary",
 						)}
 					>
-						<img
-							src={monogramaGR}
-							alt=""
-							aria-hidden="true"
-							className="h-8 w-8 object-contain"
-						/>
+						<Monogram className="h-8 w-8 text-primary-hover" />
 					</span>
 					<span className="hidden min-w-0 flex-col leading-none sm:flex">
 						<span className="text-sm font-semibold tracking-wide text-fg">

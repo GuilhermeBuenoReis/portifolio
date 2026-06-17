@@ -1,19 +1,47 @@
-import { AboutSection } from "#/features/about/components/about-section";
-import { FinalCtaSection } from "#/features/contact/components/final-cta-section";
-import { ExperienceSection } from "#/features/experience/components/experience-section";
+import { lazy, Suspense } from "react";
 import { HeroSection } from "#/features/portfolio/components/hero-section";
-import { FeaturedProjectsSection } from "#/features/projects/components/featured-projects-section";
-import { StackSection } from "#/features/stack/components/stack-section";
+
+const FeaturedProjectsSection = lazy(() =>
+	import("#/features/projects/components/featured-projects-section").then(
+		(module) => ({ default: module.FeaturedProjectsSection }),
+	),
+);
+
+const ExperienceSection = lazy(() =>
+	import("#/features/experience/components/experience-section").then(
+		(module) => ({ default: module.ExperienceSection }),
+	),
+);
+
+const StackSection = lazy(() =>
+	import("#/features/stack/components/stack-section").then((module) => ({
+		default: module.StackSection,
+	})),
+);
+
+const AboutSection = lazy(() =>
+	import("#/features/about/components/about-section").then((module) => ({
+		default: module.AboutSection,
+	})),
+);
+
+const FinalCtaSection = lazy(() =>
+	import("#/features/contact/components/final-cta-section").then((module) => ({
+		default: module.FinalCtaSection,
+	})),
+);
 
 export function HomePage() {
 	return (
 		<>
 			<HeroSection />
-			<FeaturedProjectsSection />
-			<ExperienceSection />
-			<StackSection />
-			<AboutSection />
-			<FinalCtaSection />
+			<Suspense fallback={null}>
+				<FeaturedProjectsSection />
+				<ExperienceSection />
+				<StackSection />
+				<AboutSection />
+				<FinalCtaSection />
+			</Suspense>
 		</>
 	);
 }

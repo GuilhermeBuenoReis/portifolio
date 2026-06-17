@@ -80,10 +80,11 @@ function SkillRow({ label, level }: SkillBar) {
 			</div>
 			<div className="h-1 w-full overflow-hidden rounded-full bg-surface-elevated">
 				<motion.div
-					initial={{ width: 0 }}
-					whileInView={{ width: `${level}%` }}
+					initial={{ scaleX: 0 }}
+					whileInView={{ scaleX: 1 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.8, ease: "easeOut" }}
+					style={{ width: `${level}%`, transformOrigin: "left" }}
 					className="h-full rounded-full bg-primary"
 				/>
 			</div>

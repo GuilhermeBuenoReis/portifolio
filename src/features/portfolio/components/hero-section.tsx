@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import { motion } from "motion/react";
 import { cn } from "#/lib/utils";
 
 const techTags = [
@@ -22,33 +21,18 @@ export function HeroSection() {
 			<div className="mx-auto max-w-280 px-6">
 				<div className="grid grid-cols-1 items-center gap-16 md:grid-cols-2">
 					<div className="flex flex-col gap-6">
-						<motion.h1
-							initial={{ opacity: 0, y: 16 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5, ease: "easeOut" }}
-							className="m-0 text-[clamp(2.5rem,5vw,4rem)] font-extrabold leading-[1.1] tracking-tight text-fg"
-						>
+						<h1 className="m-0 text-[clamp(2.5rem,5vw,4rem)] font-extrabold leading-[1.1] tracking-tight text-fg">
 							Desenvolvedor Fullstack focado em{" "}
 							<span className="text-primary-hover">produtos reais.</span>
-						</motion.h1>
+						</h1>
 
-						<motion.p
-							initial={{ opacity: 0, y: 12 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.45, ease: "easeOut", delay: 0.1 }}
-							className="m-0 max-w-120 text-[1.0625rem] leading-[1.75] text-fg-secondary"
-						>
+						<p className="m-0 max-w-120 text-[1.0625rem] leading-[1.75] text-fg-secondary">
 							Crio aplicações completas com React, Next.js, Node.js, Fastify,
 							PostgreSQL e TypeScript, unindo arquitetura limpa, boa experiência
 							de uso e visão de produto.
-						</motion.p>
+						</p>
 
-						<motion.div
-							initial={{ opacity: 0, y: 8 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
-							className="flex flex-wrap gap-3"
-						>
+						<div className="flex flex-wrap gap-3">
 							<Link
 								to="/projects"
 								className={cn(
@@ -72,13 +56,10 @@ export function HeroSection() {
 							>
 								Fale comigo
 							</Link>
-						</motion.div>
+						</div>
 					</div>
 
-					<motion.div
-						initial={{ opacity: 0, x: 20 }}
-						animate={{ opacity: 1, x: 0 }}
-						transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
+					<div
 						className={cn(
 							"overflow-hidden rounded-xl",
 							"border border-border bg-surface",
@@ -137,7 +118,7 @@ export function HeroSection() {
 								</p>
 							</div>
 						</div>
-					</motion.div>
+					</div>
 				</div>
 			</div>
 		</section>

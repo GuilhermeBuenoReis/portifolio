@@ -7,6 +7,8 @@ type SkillIconsProps = {
 	title?: string;
 	theme?: SkillIconTheme;
 	perLine?: number;
+	width?: number;
+	height?: number;
 };
 
 export function SkillIcons({
@@ -16,6 +18,8 @@ export function SkillIcons({
 	title,
 	theme = "dark",
 	perLine,
+	width = 48,
+	height = 48,
 }: SkillIconsProps) {
 	const searchParams = new URLSearchParams({
 		i: icons.join(","),
@@ -32,6 +36,8 @@ export function SkillIcons({
 			alt={alt}
 			title={title}
 			className={className}
+			width={width}
+			height={height}
 			loading="lazy"
 			decoding="async"
 		/>
