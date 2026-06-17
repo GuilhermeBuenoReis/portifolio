@@ -16,6 +16,7 @@ export const projects: Project[] = [
 		],
 		bannerGradient:
 			"bg-gradient-to-br from-indigo-950 via-purple-950 to-violet-900",
+		preview: "crm",
 		featured: true,
 	},
 	{
@@ -33,6 +34,7 @@ export const projects: Project[] = [
 		],
 		bannerGradient:
 			"bg-gradient-to-br from-pink-950 via-purple-950 to-fuchsia-900",
+		preview: "checkout",
 		featured: true,
 	},
 	{
@@ -47,6 +49,7 @@ export const projects: Project[] = [
 		],
 		bannerGradient:
 			"bg-gradient-to-br from-cyan-950 via-slate-900 to-purple-950",
+		preview: "health",
 		featured: true,
 	},
 	{
@@ -64,6 +67,7 @@ export const projects: Project[] = [
 		],
 		bannerGradient:
 			"bg-gradient-to-br from-amber-950 via-purple-950 to-violet-900",
+		preview: "mobile",
 	},
 	{
 		id: "therapy",

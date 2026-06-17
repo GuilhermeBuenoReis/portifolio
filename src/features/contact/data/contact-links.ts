@@ -1,20 +1,28 @@
-import { Github, Linkedin, Mail, MapPin } from "lucide-react";
-import type {
-	ContactInfo,
-	FormField,
-	SocialLink,
-} from "#/features/contact/types/contact";
+import { Mail, MapPin } from "lucide-react";
+import type { ContactInfo, SocialLink } from "#/features/contact/types/contact";
 
 export const contactEmail = "guilhermebuenoreis.contact@gmail.com";
 
-export const formAction = `https://formsubmit.co/${contactEmail}`;
+export const contactSubject = encodeURIComponent("Contato pelo portfólio");
+
+export const contactHref = `mailto:${contactEmail}?subject=${contactSubject}`;
+
+export const gmailHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${contactEmail}&su=${contactSubject}`;
+
+export const whatsappPhone = "5542988663891";
+
+export const whatsappMessage = encodeURIComponent(
+	"Olá Guilherme, vi seu portfólio e gostaria de conversar sobre um projeto.",
+);
+
+export const whatsappHref = `https://wa.me/${whatsappPhone}?text=${whatsappMessage}`;
 
 export const contactInfo: ContactInfo[] = [
 	{
 		icon: Mail,
 		label: "E-mail",
 		value: contactEmail,
-		href: `mailto:${contactEmail}`,
+		href: contactHref,
 	},
 	{
 		icon: MapPin,
@@ -26,42 +34,24 @@ export const contactInfo: ContactInfo[] = [
 
 export const socialLinks: SocialLink[] = [
 	{
-		icon: Github,
+		skill: "github",
 		label: "GitHub",
 		href: "https://github.com/GuilhermeBuenoReis",
 	},
 	{
-		icon: Linkedin,
+		skill: "linkedin",
 		label: "LinkedIn",
 		href: "https://www.linkedin.com/in/guilherme-bueno-reis",
 	},
 	{
 		icon: Mail,
 		label: "Email",
-		href: `mailto:${contactEmail}`,
-	},
-];
-
-export const formFields: FormField[] = [
-	{ name: "name", label: "Nome", placeholder: "Seu nome", type: "text" },
-	{
-		name: "email",
-		label: "E-mail",
-		placeholder: "seu@email.com",
-		type: "email",
+		href: contactHref,
 	},
 	{
-		name: "subject",
-		label: "Assunto",
-		placeholder: "Como posso ajudar?",
-		type: "text",
-	},
-	{
-		name: "message",
-		label: "Mensagem",
-		placeholder: "Conte-me mais sobre seu projeto...",
-		type: "text",
-		multiline: true,
+		whatsapp: true,
+		label: "WhatsApp",
+		href: whatsappHref,
 	},
 ];
 

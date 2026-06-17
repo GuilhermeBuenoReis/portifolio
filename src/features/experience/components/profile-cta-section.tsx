@@ -1,5 +1,6 @@
 import { Download, Mail } from "lucide-react";
 import { motion } from "motion/react";
+import { gmailHref } from "#/features/contact/data/contact-links";
 import { cn } from "#/lib/utils";
 
 export function ProfileCtaSection() {
@@ -41,7 +42,7 @@ export function ProfileCtaSection() {
 							Download CV (PDF)
 						</a>
 						<a
-							href="https://mail.google.com/mail/?view=cm&fs=1&to=guilhermebuenoreis.contact@gmail.com"
+							href={gmailHref}
 							target="_blank"
 							rel="noopener noreferrer"
 							className={cn(

@@ -1,4 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
+import monogramaGR from "#/assets/images/monograma-GR.png";
 import { cn } from "#/lib/utils";
 
 const navLinks = [
@@ -46,9 +47,35 @@ export function Header() {
 			<div className="mx-auto flex h-full max-w-280 items-center justify-between gap-6 px-4 sm:px-6 lg:gap-12">
 				<Link
 					to="/"
-					className="shrink-0 text-[1.0625rem] font-bold tracking-tight text-fg"
+					aria-label="Guilherme Reis - ir para a página inicial"
+					className={cn(
+						"group inline-flex shrink-0 items-center gap-3 rounded-md",
+						"outline-none transition-colors duration-150",
+						"focus-visible:ring-2 focus-visible:ring-(--primary-border)",
+					)}
 				>
-					Guilherme Reis
+					<span
+						className={cn(
+							"flex h-11 w-11 items-center justify-center rounded-md",
+							"border border-(--primary-border) bg-(--primary-soft)",
+							"transition-colors duration-150 group-hover:border-primary",
+						)}
+					>
+						<img
+							src={monogramaGR}
+							alt=""
+							aria-hidden="true"
+							className="h-8 w-8 object-contain"
+						/>
+					</span>
+					<span className="hidden min-w-0 flex-col leading-none sm:flex">
+						<span className="text-sm font-semibold tracking-wide text-fg">
+							Guilherme Reis
+						</span>
+						<span className="mt-1 text-xs font-medium text-fg-muted">
+							Full Stack Developer
+						</span>
+					</span>
 				</Link>
 
 				<nav className="hidden flex-1 items-center justify-center gap-1 lg:flex">

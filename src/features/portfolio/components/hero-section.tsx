@@ -70,7 +70,7 @@ export function HeroSection() {
 									"hover:border-(--primary-border)",
 								)}
 							>
-								Falar comigo
+								Fale comigo
 							</Link>
 						</motion.div>
 					</div>

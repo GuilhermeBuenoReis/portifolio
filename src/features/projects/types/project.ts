@@ -1,3 +1,5 @@
+import type { ProjectPreview } from "#/components/ui/project-preview-mockups";
+
 export type ProjectCategory = "Trabalho" | "Projeto Pessoal" | "Faculdade";
 
 export type ProjectRepo = {
@@ -13,5 +15,6 @@ export type Project = {
 	tags: string[];
 	repos: ProjectRepo[];
 	bannerGradient: string;
+	preview?: ProjectPreview;
 	featured?: boolean;
 };

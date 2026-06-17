@@ -2,8 +2,8 @@ import {
 	Box,
 	Code2,
 	Database,
-	Figma,
 	GitBranch,
+	PenTool,
 	Send,
 	Terminal,
 	Wrench,
@@ -97,7 +97,7 @@ export const dailyToolsCard: DailyToolsCardData = {
 	title: "Ferramentas do Dia a Dia",
 	description: "A produtividade nasce de um workflow bem refinado.",
 	tools: [
-		{ name: "Figma", icon: Figma },
+		{ name: "Figma", icon: PenTool },
 		{ name: "VS Code", icon: Code2 },
 		{ name: "Linux / Zsh", icon: Terminal },
 		{ name: "Git / GitHub", icon: GitBranch },

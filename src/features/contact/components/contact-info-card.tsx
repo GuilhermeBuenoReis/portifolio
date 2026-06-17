@@ -1,4 +1,6 @@
 import { motion } from "motion/react";
+import { SkillIcons } from "#/components/ui/skill-icons";
+import { WhatsappIcon } from "#/components/ui/whatsapp-icon";
 import {
 	availabilityStatus,
 	contactInfo,
@@ -65,7 +67,17 @@ export function ContactInfoCard() {
 								"hover:border-(--primary-border) hover:text-primary-hover",
 							)}
 						>
-							<social.icon size={18} />
+							{"skill" in social ? (
+								<SkillIcons
+									icons={[social.skill]}
+									alt={social.label}
+									className="h-6 w-6 rounded"
+								/>
+							) : "whatsapp" in social ? (
+								<WhatsappIcon size={18} />
+							) : (
+								<social.icon size={18} />
+							)}
 						</a>
 					))}
 				</div>
