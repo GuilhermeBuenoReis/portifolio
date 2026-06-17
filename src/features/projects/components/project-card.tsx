@@ -1,7 +1,8 @@
-import { Github } from "lucide-react";
 import { motion } from "motion/react";
+import { SkillIcons } from "#/components/ui/skill-icons";
 import type { Project } from "#/features/projects/types/project";
 import { cn } from "#/lib/utils";
+import { ProjectPreviewMockup } from "./project-preview-mockups";
 
 type Props = {
 	project: Project;
@@ -23,10 +24,18 @@ export function ProjectCard({ project, index }: Props) {
 				"[box-shadow:var(--shadow-card)]",
 			)}
 		>
-			<div className={cn("relative h-50 w-full", project.bannerGradient)}>
+			<div
+				className={cn(
+					"relative h-50 w-full overflow-hidden",
+					project.bannerGradient,
+				)}
+			>
 				<div className="absolute -right-10 -top-10 h-44 w-44 rounded-full bg-white/4" />
 				<div className="absolute -bottom-8 -left-8 h-32 w-32 rounded-full bg-white/3" />
 				<div className="absolute right-6 top-6 h-16 w-16 rounded-full bg-white/3" />
+				{project.preview ? (
+					<ProjectPreviewMockup variant={project.preview} />
+				) : null}
 				<div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent" />
 				<span
 					className={cn(
@@ -77,7 +86,11 @@ export function ProjectCard({ project, index }: Props) {
 								"hover:border-(--primary-border) hover:text-primary-hover",
 							)}
 						>
-							<Github size={14} />
+							<SkillIcons
+								icons={["github"]}
+								alt=""
+								className="h-4 w-4 rounded-sm"
+							/>
 							{repo.label}
 						</a>
 					))}

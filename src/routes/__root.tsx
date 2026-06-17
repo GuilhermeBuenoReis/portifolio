@@ -1,4 +1,5 @@
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Providers } from "#/app/providers";
 import { MainLayout } from "#/components/layout/main-layout";
 
 import appCss from "../styles/globals.css?url";
@@ -14,7 +15,7 @@ export const Route = createRootRoute({
 				content: "width=device-width, initial-scale=1",
 			},
 			{
-				title: "Portfolio",
+				title: "Guilherme Reis",
 			},
 		],
 		links: [
@@ -35,12 +36,12 @@ export const Route = createRootRoute({
 
 function RootDocument({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang="en" suppressHydrationWarning>
+		<html lang="en" className="dark" suppressHydrationWarning>
 			<head>
 				<HeadContent />
 			</head>
 			<body>
-				{children}
+				<Providers>{children}</Providers>
 				<Scripts />
 			</body>
 		</html>

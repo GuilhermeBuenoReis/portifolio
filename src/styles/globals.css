@@ -6,6 +6,29 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+	color-scheme: light;
+	--background: #f5f5f7;
+	--background-soft: #ececf0;
+	--surface: #ffffff;
+	--surface-elevated: #f2f2f6;
+	--border: rgba(9, 9, 11, 0.1);
+	--border-strong: rgba(9, 9, 11, 0.16);
+	--text-primary: #18181b;
+	--text-secondary: #52525b;
+	--text-muted: #71717a;
+	--primary: #7c3aed;
+	--primary-hover: #6d28d9;
+	--primary-dark: #5b21b6;
+	--primary-soft: rgba(124, 58, 237, 0.1);
+	--primary-border: rgba(124, 58, 237, 0.28);
+	--header-background: rgba(255, 255, 255, 0.82);
+	--radius: 0.5rem;
+	--shadow-card:
+		0 0 60px rgba(124, 58, 237, 0.05), 0 12px 32px rgba(9, 9, 11, 0.08);
+}
+
+.dark {
+	color-scheme: dark;
 	--background: #050509;
 	--background-soft: #09090f;
 	--surface: #0d0d14;
@@ -20,9 +43,9 @@
 	--primary-dark: #5b21b6;
 	--primary-soft: rgba(139, 92, 246, 0.14);
 	--primary-border: rgba(139, 92, 246, 0.35);
-	--radius: 0.5rem;
-	--shadow-card: 0 0 80px rgba(139, 92, 246, 0.06),
-		0 24px 48px rgba(0, 0, 0, 0.35);
+	--header-background: rgba(5, 5, 9, 0.82);
+	--shadow-card:
+		0 0 80px rgba(139, 92, 246, 0.06), 0 24px 48px rgba(0, 0, 0, 0.35);
 }
 
 @theme inline {
@@ -46,35 +69,37 @@
 	--radius-lg: calc(var(--radius) + 4px);
 }
 
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
+@layer base {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
 
-html {
-	scroll-behavior: smooth;
-}
+	html {
+		scroll-behavior: smooth;
+	}
 
-body {
-	margin: 0;
-	background-color: var(--background);
-	color: var(--text-primary);
-	font-family: "Inter", system-ui, -apple-system, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
+	body {
+		margin: 0;
+		background-color: var(--background);
+		color: var(--text-primary);
+		font-family: "Inter", system-ui, -apple-system, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
 
-a {
-	text-decoration: none;
-	color: inherit;
-}
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
 
-button {
-	font-family: inherit;
-}
+	button {
+		font-family: inherit;
+	}
 
-::selection {
-	background-color: var(--primary-soft);
-	color: var(--text-primary);
+	::selection {
+		background-color: var(--primary-soft);
+		color: var(--text-primary);
+	}
 }

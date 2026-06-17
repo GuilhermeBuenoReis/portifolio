@@ -1,3 +1,4 @@
+import { whatsappHref } from "#/features/contact/data/contact-links";
 import { cn } from "#/lib/utils";
 
 const socialLinks = [
@@ -10,6 +11,7 @@ const socialLinks = [
 		href: "https://www.linkedin.com/in/guilherme-bueno-reis/",
 	},
 	{ label: "Instagram", href: "https://www.instagram.com/devguilherme_bueno/" },
+	{ label: "WhatsApp", href: whatsappHref },
 ] as const;
 
 export function Footer() {
@@ -42,6 +44,8 @@ export function Footer() {
 						<a
 							key={link.label}
 							href={link.href}
+							target="_blank"
+							rel="noreferrer"
 							className={cn(
 								"text-sm text-fg-secondary",
 								"transition-colors duration-150 hover:text-fg",

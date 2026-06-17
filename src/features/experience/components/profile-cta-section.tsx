@@ -1,5 +1,6 @@
 import { Download, Mail } from "lucide-react";
 import { motion } from "motion/react";
+import { gmailHref } from "#/features/contact/data/contact-links";
 import { cn } from "#/lib/utils";
 
 export function ProfileCtaSection() {
@@ -32,8 +33,8 @@ export function ProfileCtaSection() {
 							href="/curriculo-guilherme-reis.pdf"
 							download
 							className={cn(
-								"inline-flex items-center gap-2 rounded-md px-5 py-2.5",
-								"bg-primary text-sm font-medium text-white",
+								"inline-flex items-center gap-2 rounded-lg px-5 py-2.5",
+								"bg-primary text-sm font-semibold text-white shadow-sm shadow-primary/25",
 								"transition-colors duration-150 hover:bg-primary-hover",
 							)}
 						>
@@ -41,14 +42,15 @@ export function ProfileCtaSection() {
 							Download CV (PDF)
 						</a>
 						<a
-							href="https://mail.google.com/mail/?view=cm&fs=1&to=guilhermebuenoreis.contact@gmail.com"
+							href={gmailHref}
 							target="_blank"
 							rel="noopener noreferrer"
 							className={cn(
-								"inline-flex items-center gap-2 rounded-md px-5 py-2.5",
-								"border border-border-strong bg-surface-elevated",
+								"inline-flex items-center gap-2 rounded-lg px-5 py-2.5",
+								"border border-border-strong bg-surface shadow-sm dark:bg-surface-elevated",
 								"text-sm font-medium text-fg",
-								"transition-colors duration-150 hover:border-(--primary-border)",
+								"transition-colors duration-150",
+								"hover:border-(--primary-border) hover:bg-(--primary-soft) hover:text-primary-hover",
 							)}
 						>
 							<Mail size={16} />

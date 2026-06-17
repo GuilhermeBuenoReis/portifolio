@@ -52,9 +52,9 @@ export function HeroSection() {
 							<Link
 								to="/projects"
 								className={cn(
-									"inline-flex items-center rounded-md",
-									"bg-primary px-6 py-3",
-									"text-[0.9375rem] font-medium text-white",
+									"inline-flex items-center rounded-lg",
+									"bg-primary px-6 py-3 shadow-sm shadow-primary/25",
+									"text-[0.9375rem] font-semibold text-white",
 									"transition-colors duration-150 hover:bg-primary-hover",
 								)}
 							>
@@ -63,14 +63,14 @@ export function HeroSection() {
 							<Link
 								to="/contact"
 								className={cn(
-									"inline-flex items-center rounded-md",
-									"border border-border-strong bg-transparent",
+									"inline-flex items-center rounded-lg",
+									"border border-border-strong bg-surface shadow-sm dark:bg-surface-elevated",
 									"px-6 py-3 text-[0.9375rem] font-medium",
 									"text-fg transition-colors duration-150",
-									"hover:border-(--primary-border)",
+									"hover:border-(--primary-border) hover:bg-(--primary-soft) hover:text-primary-hover",
 								)}
 							>
-								Falar comigo
+								Fale comigo
 							</Link>
 						</motion.div>
 					</div>
