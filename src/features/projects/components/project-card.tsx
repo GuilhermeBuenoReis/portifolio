@@ -1,3 +1,4 @@
+import { Globe } from "lucide-react";
 import { motion } from "motion/react";
 import { SkillIcons } from "#/components/ui/skill-icons";
 import type { Project } from "#/features/projects/types/project";
@@ -10,6 +11,14 @@ type Props = {
 };
 
 export function ProjectCard({ project, index }: Props) {
+	const reposByLabel = new Map<string, Project["repos"][number]>();
+
+	for (const repo of project.repos) {
+		reposByLabel.set(repo.label.trim().toLowerCase(), repo);
+	}
+
+	const repos = Array.from(reposByLabel.values());
+
 	return (
 		<motion.div
 			initial={{ opacity: 0, y: 24 }}
@@ -72,7 +81,7 @@ export function ProjectCard({ project, index }: Props) {
 				</div>
 
 				<div className="mt-auto flex flex-wrap gap-2 pt-3">
-					{project.repos.map((repo) => (
+					{repos.map((repo) => (
 						<a
 							key={repo.url}
 							href={repo.url}
@@ -86,11 +95,15 @@ export function ProjectCard({ project, index }: Props) {
 								"hover:border-(--primary-border) hover:text-primary-hover",
 							)}
 						>
-							<SkillIcons
-								icons={["github"]}
-								alt=""
-								className="h-4 w-4 rounded-sm"
-							/>
+							{repo.label.trim().toLowerCase() === "web" ? (
+								<Globe className="h-4 w-4" aria-hidden="true" />
+							) : (
+								<SkillIcons
+									icons={["github"]}
+									alt=""
+									className="h-4 w-4 rounded-sm"
+								/>
+							)}
 							{repo.label}
 						</a>
 					))}

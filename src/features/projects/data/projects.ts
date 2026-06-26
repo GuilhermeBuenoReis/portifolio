@@ -10,7 +10,11 @@ export const projects: Project[] = [
 		tags: ["Fastify", "Drizzle ORM", "React", "TypeScript"],
 		repos: [
 			{
-				label: "Código",
+				label: "Web",
+				url: "https://github.com/GuilhermeBuenoReis/Onec-frellancer",
+			},
+			{
+				label: "Api",
 				url: "https://github.com/GuilhermeBuenoReis/onec-backend",
 			},
 		],
@@ -28,8 +32,12 @@ export const projects: Project[] = [
 		tags: ["Next.js", "Tailwind CSS", "Fastify", "PostgreSQL"],
 		repos: [
 			{
-				label: "Código",
+				label: "Web",
 				url: "https://github.com/GuilhermeBuenoReis/buenos_cakes_web",
+			},
+			{
+				label: "Api",
+				url: "https://github.com/GuilhermeBuenoReis/buenos_cakes_api",
 			},
 		],
 		bannerGradient:
@@ -117,12 +125,8 @@ export const projects: Project[] = [
 		],
 		repos: [
 			{
-				label: "Back-end",
+				label: "Api",
 				url: "https://github.com/GuilhermeBuenoReis/Chronicle-back-end",
-			},
-			{
-				label: "Front-end",
-				url: "https://github.com/GuilhermeBuenoReis/Chronicle-front-end",
 			},
 		],
 		bannerGradient:

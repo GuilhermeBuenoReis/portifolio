@@ -61,7 +61,7 @@ export function Header() {
 							"hover:border-primary hover:bg-[rgba(139,92,246,0.22)]",
 						)}
 					>
-						<span className="lg:hidden">Contact</span>
+						<span className="lg:hidden">Entrar em contato</span>
 						<span className="hidden lg:inline">Entrar em contato</span>
 					</Link>
 				</div>
